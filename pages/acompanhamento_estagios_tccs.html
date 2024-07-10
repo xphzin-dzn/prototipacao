@@ -11,6 +11,9 @@
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .header,
@@ -33,6 +36,7 @@
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      flex: 1;
     }
 
     .container h2 {
@@ -96,12 +100,16 @@
     th {
       background-color: #f4f4f4;
     }
+
+    .footer {
+      margin-top: auto;
+    }
   </style>
 </head>
 
 <body>
   <header class="header">
-    <h1>Sistema de Acompanhamento de Estágios e TCCs</h1>
+    <img src="../img/sigaa.png" alt="SIGAA Logo" style="max-width: 200px;">
   </header>
 
   <div class="container">
@@ -162,29 +170,6 @@
   <footer class="footer">
     <p>&copy; 2024 SIGAA Acadêmico. Todos os direitos reservados.</p>
   </footer>
-
-  <script>
-    function filtrar() {
-      var filtroCurso = document.getElementById('filtroCurso').value;
-      var filtroTipo = document.getElementById('filtroTipo').value;
-      var tabela = document.getElementById('tabelaEstagiosTCCs').getElementsByTagName('tbody')[0];
-      var linhas = tabela.getElementsByTagName('tr');
-
-      for (var i = 0; i < linhas.length; i++) {
-        var curso = linhas[i].getElementsByTagName('td')[1].textContent;
-        var tipo = linhas[i].getElementsByTagName('td')[2].textContent;
-        linhas[i].style.display = '';
-
-        if (filtroCurso && curso !== filtroCurso) {
-          linhas[i].style.display = 'none';
-        }
-
-        if (filtroTipo && tipo !== filtroTipo) {
-          linhas[i].style.display = 'none';
-        }
-      }
-    }
-  </script>
 </body>
 
 </html>
