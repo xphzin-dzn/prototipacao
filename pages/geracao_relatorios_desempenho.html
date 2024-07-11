@@ -10,6 +10,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -17,10 +20,16 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            width: 180px;
         }
 
         main {
             padding: 20px;
+            flex: 1;
         }
 
         .reports {
@@ -51,12 +60,19 @@
         a:hover {
             text-decoration: underline;
         }
+
+        footer {
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Geração de Relatórios de Desempenho</h1>
+        <img src="../img/sigaa.png" alt="SIGAA Logo">
     </header>
     <main>
         <div class="reports">
@@ -68,6 +84,9 @@
             </ul>
         </div>
     </main>
+    <footer>
+        <p>&copy; 2024 SIGAA Acadêmico. Todos os direitos reservados.</p>
+    </footer>
 </body>
 
 </html>
