@@ -63,12 +63,26 @@
             border-radius: 5px;
             font-size: 16px;
         }
+
+        footer {
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        img {
+            width: 180px;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Visualização de Horários de Aula</h1>
+        <img src="../img/sigaa.png" alt="SIGAA Logo" />
     </header>
     <main>
         <div class="schedule">
@@ -94,6 +108,9 @@
             </table>
         </div>
     </main>
+    <footer>
+        <p>&copy; 2024 SIGAA Acadêmico. Todos os direitos reservados.</p>
+    </footer>
     <script>
         function atualizarHorarios() {
             var semestre = document.getElementById("semestre").value;
