@@ -57,18 +57,28 @@
         }
 
         button:hover {
-            background-color: #4caf50;
+            background-color: #45a049;
         }
 
         .content {
             margin-top: 20px;
+        }
+
+        footer {
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Suporte Técnico - Professor</h1>
+        <img src="../img/sigaa.png" alt="SIGAA Logo" width="180">
     </header>
     <main>
         <div class="support">
@@ -90,6 +100,9 @@
             </div>
         </div>
     </main>
+    <footer>
+        <p>&copy; 2024 SIGAA Acadêmico. Todos os direitos reservados.</p>
+    </footer>
     <script>
         document.getElementById('supportForm').addEventListener('submit', function (event) {
             event.preventDefault();
