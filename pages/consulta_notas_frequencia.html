@@ -13,6 +13,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            background-color: #f4f4f4;
         }
 
         header {
@@ -27,14 +28,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px;
         }
 
-        form {
-            width: 300px;
-            background-color: #f8f9fa;
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        form {
+            margin-bottom: 20px;
         }
 
         label {
@@ -60,6 +68,10 @@
             border-radius: 5px;
         }
 
+        button:hover {
+            background-color: #45a049;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -80,28 +92,43 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+
+        footer {
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Consulta de Notas e Frequência</h1>
+        <img src="../img/sigaa.png" alt="SIGAA Logo" style="max-width: 200px;">
     </header>
     <main>
-        <form id="consultaForm">
-            <label for="semestre">Selecione o Ano/Semestre:</label>
-            <select id="semestre">
-                <option value="2022.1">2022.1</option>
-                <option value="2022.2">2022.2</option>
-                <option value="2023.1">2023.1</option>
-                <option value="2023.2">2023.2</option>
-                <option value="2024.1">2024.1</option>
-                <option value="2024.2">2024.2</option>
-            </select>
-            <button type="submit">Consultar</button>
-        </form>
-        <div id="resultado"></div>
+        <div class="container">
+            <form id="consultaForm">
+                <label for="semestre">Selecione o Ano/Semestre:</label>
+                <select id="semestre">
+                    <option value="2022.1">2022.1</option>
+                    <option value="2022.2">2022.2</option>
+                    <option value="2023.1">2023.1</option>
+                    <option value="2023.2">2023.2</option>
+                    <option value="2024.1">2024.1</option>
+                    <option value="2024.2">2024.2</option>
+                </select>
+                <button type="submit">Consultar</button>
+            </form>
+            <div id="resultado"></div>
+        </div>
     </main>
+    <footer class="footer">
+        <p>&copy; 2024 SIGAA - Acadêmico. Todos os direitos reservados.</p>
+    </footer>
     <script>
         document.getElementById('consultaForm').addEventListener('submit', function (event) {
             event.preventDefault();
