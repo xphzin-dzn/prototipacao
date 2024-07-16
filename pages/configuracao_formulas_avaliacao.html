@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração de Fórmulas de Avaliação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header,
+        .footer {
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .header img {
+            width: 180px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .btn {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .formula-list {
+            margin-top: 20px;
+        }
+
+        .formula-item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .formula-item h3 {
+            margin-top: 0;
+        }
+
+        .criteria-list {
+            margin-top: 10px;
+        }
+
+        .criteria-item {
+            margin-bottom: 5px;
+        }
+
+        .criteria-item label {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+        }
+
+        .criteria-item input[type="text"] {
+            width: calc(100% - 160px);
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="../img/sigaa.png" alt="SIGAA">
+    </header>
+
+    <div class="container">
+        <h2>Configuração de Fórmulas de Avaliação</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="disciplina">Disciplina:</label>
+                <input type="text" id="disciplina" name="disciplina" required>
+            </div>
+            <div class="form-group">
+                <label for="formula">Fórmula de Avaliação:</label>
+                <textarea id="formula" name="formula" rows="5" required></textarea>
+            </div>
+            <div class="criteria-list">
+                <div class="criteria-item">
+                    <label for="crit1">Critério 1:</label>
+                    <input type="text" id="crit1" name="crit1" required>
+                </div>
+                <div class="criteria-item">
+                    <label for="crit2">Critério 2:</label>
+                    <input type="text" id="crit2" name="crit2" required>
+                </div>
+                <div class="criteria-item">
+                    <label for="crit3">Critério 3:</label>
+                    <input type="text" id="crit3" name="crit3" required>
+                </div>
+            </div>
+            <button type="submit" class="btn">Salvar Fórmula</button>
+        </form>
+
+        <div class="formula-list">
+            <div class="formula-item">
+                <h3>Disciplina: Matemática</h3>
+                <p>Fórmula: (Nota1 + Nota2 + Nota3) / 3</p>
+                <ul>
+                    <li>Critério 1: Participação</li>
+                    <li>Critério 2: Provas</li>
+                    <li>Critério 3: Trabalhos</li>
+                </ul>
+            </div>
+            <div class="formula-item">
+                <h3>Disciplina: Física</h3>
+                <p>Fórmula: (Nota1 * 0.3) + (Nota2 * 0.5) + (Nota3 * 0.2)</p>
+                <ul>
+                    <li>Critério 1: Provas</li>
+                    <li>Critério 2: Trabalhos</li>
+                    <li>Critério 3: Participação</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 SIGAA Acadêmico. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

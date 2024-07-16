@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação e Gerenciamento de Fóruns de Discussão</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header,
+        .footer {
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .header img {
+            width: 180px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .btn {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .forum-list {
+            margin-top: 20px;
+        }
+
+        .forum-item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .forum-item h3 {
+            margin-top: 0;
+        }
+
+        .forum-item p {
+            margin: 0;
+        }
+
+        .btn-edit,
+        .btn-delete {
+            background-color: #f39c12;
+        }
+
+        .btn-edit:hover {
+            background-color: #e67e22;
+        }
+
+        .btn-delete {
+            background-color: #e74c3c;
+        }
+
+        .btn-delete:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="../img/sigaa.png" alt="SIGAA">
+    </header>
+
+    <div class="container">
+        <h2>Criação e Gerenciamento de Fóruns de Discussão</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="titulo">Título do Fórum:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="disciplina">Disciplina:</label>
+                <select id="disciplina" name="disciplina" required>
+                    <option value="">Selecione...</option>
+                    <option value="matematica">Matemática</option>
+                    <option value="fisica">Física</option>
+                    <option value="historia">História</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Criar Fórum</button>
+        </form>
+
+        <div class="forum-list">
+            <div class="forum-item">
+                <h3>Título: Discussão de Álgebra Linear</h3>
+                <p><strong>Descrição:</strong> Fórum para discutir conceitos de álgebra linear aplicados à física.</p>
+                <p><strong>Disciplina:</strong> Matemática</p>
+                <button class="btn btn-edit">Editar</button>
+                <button class="btn btn-delete">Excluir</button>
+            </div>
+            <div class="forum-item">
+                <h3>Título: Debate sobre Revolução Francesa</h3>
+                <p><strong>Descrição:</strong> Discussão sobre os impactos políticos da Revolução Francesa na história
+                    moderna.</p>
+                <p><strong>Disciplina:</strong> História</p>
+                <button class="btn btn-edit">Editar</button>
+                <button class="btn btn-delete">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 SIGAA Acadêmico. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
