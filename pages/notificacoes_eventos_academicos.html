@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações de Eventos Acadêmicos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header,
+        .footer {
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .header img {
+            width: 180px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .event-list {
+            margin-top: 20px;
+        }
+
+        .event-item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .event-item h3 {
+            margin-top: 0;
+        }
+
+        .event-item p {
+            margin: 0;
+        }
+
+        .event-item .details {
+            margin-top: 10px;
+        }
+
+        .btn {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="../img/sigaa.png" alt="SIGAA">
+    </header>
+
+    <div class="container">
+        <h2>Notificações de Eventos Acadêmicos</h2>
+
+        <div class="event-list">
+            <div class="event-item">
+                <h3>Palestra: Introdução à Inteligência Artificial</h3>
+                <p><strong>Data:</strong> 10 de agosto de 2024</p>
+                <p><strong>Horário:</strong> 14:00 - 16:00</p>
+                <div class="details">
+                    <p>Palestra sobre os fundamentos e aplicações da inteligência artificial na indústria.</p>
+                </div>
+                <button class="btn">Ver Detalhes</button>
+            </div>
+            <div class="event-item">
+                <h3>Workshop: Design Thinking na Prática</h3>
+                <p><strong>Data:</strong> 15 de setembro de 2024</p>
+                <p><strong>Horário:</strong> 09:00 - 12:00</p>
+                <div class="details">
+                    <p>Workshop prático para aprender técnicas de design thinking aplicadas a problemas reais.</p>
+                </div>
+                <button class="btn">Ver Detalhes</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 SIGAA Acadêmico. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
